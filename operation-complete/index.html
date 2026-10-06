@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Barcelona Boys Agency</title><meta name="description" content="Barcelona Boys Agency">
+<meta name="robots" content="noindex,nofollow,noarchive"><meta name="theme-color" content="#0a0908">
+<meta property="og:title" content="Barcelona Boys Agency"><meta property="og:description" content="Barcelona Boys Agency"><meta property="og:type" content="website"><meta property="og:site_name" content="Barcelona Boys Agency">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230a0908' stroke='%23c9a45c' stroke-width='3'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='27' font-weight='700' fill='%23c9a45c'%3EBB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css"></head>
+<body data-page="reveal">
+<style>body{background:#000;overflow:hidden}header.top,footer,.wa,.cookie{display:none!important}
+#stage{position:fixed;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:radial-gradient(ellipse at center,#1c0a0f 0,#000 70%)}
+.s{position:absolute;opacity:0;transform:scale(.9);transition:1s cubic-bezier(.2,.8,.2,1);padding:24px;max-width:1000px}.s.on{opacity:1;transform:none}
+.s h1{font-size:clamp(40px,9vw,120px);letter-spacing:.04em;line-height:1}.s .e{font-size:clamp(12px,2vw,16px);letter-spacing:.4em;color:var(--gold);margin-bottom:20px}
+.s h2{font-size:clamp(30px,6vw,76px);line-height:1.1}.g{color:var(--gold2)}
+.big{font-size:clamp(60px,15vw,200px)!important;background:linear-gradient(135deg,#f0d9a0,#b58d42);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
+.glitch{animation:gl .5s steps(2) 3}@keyframes gl{25%{transform:translate(-6px,2px);text-shadow:4px 0 #8c1c2f}75%{transform:translate(6px,-2px);text-shadow:-4px 0 #c9a45c}}
+#cv{position:fixed;inset:0;pointer-events:none;z-index:3}
+#rp{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:5;font-size:10px;letter-spacing:.3em;color:#6f675d;background:none;border:1px solid #2a2523;padding:8px 18px;cursor:pointer;opacity:0;transition:1s}
+#start{position:fixed;inset:0;z-index:9;background:#000;display:grid;place-items:center;cursor:pointer}#start button{animation:none}
+#flash{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:8}</style>
+<div id="start"><div class="center"><div class="eyebrow">Operation complete</div><p style="margin:16px 0 28px;color:var(--mut)">Hand the phone to Fernando, then tap start.</p><button class="btn gold">Start</button></div></div>
+<canvas id="cv"></canvas><div id="flash"></div>
+<div id="stage">
+<div class="s" id="a"><div class="e">BARCELONA BOYS AGENCY</div><h1>YOU'VE BEEN<br><span class="g">BOOKED.</span></h1></div>
+<div class="s" id="b"><h2>FERNANDO,<br><span class="g">YOUR FIRST PROFESSIONAL BOOKING<br>IS IN <span id="cd">3 HOURS</span>.</span></h2></div>
+<div class="s" id="c"><h1 class="big">JUST<br>KIDDING.</h1></div>
+<div class="s" id="d"><div class="e">CONGRATULATIONS</div><h1>YOU'RE THE<br><span class="big">GROOM.</span></h1></div></div>
+<button id="rp">REPLAY</button>
+<script src="../assets/js/main.js"></script>
+<script>
+const $=i=>document.getElementById(i),T=(f,ms)=>setTimeout(f,ms);
+const show=id=>{['a','b','c','d'].forEach(x=>$(x).classList.toggle('on',x===id))};
+const cv=$('cv'),cx=cv.getContext('2d');let P=[],run=false;
+function size(){cv.width=innerWidth;cv.height=innerHeight}size();addEventListener('resize',size);
+function burst(){const cols=['#e4c985','#c9a45c','#8c1c2f','#f5f1ea'];for(let i=0;i<260;i++)P.push({x:innerWidth/2,y:innerHeight*.55,vx:(Math.random()-.5)*22,vy:-Math.random()*20-4,s:Math.random()*8+3,r:Math.random()*6,c:cols[i%4],l:0});if(!run){run=true;loop()}}
+function loop(){cx.clearRect(0,0,cv.width,cv.height);P.forEach(p=>{p.vy+=.35;p.x+=p.vx;p.y+=p.vy;p.r+=.2;p.l++;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);cx.restore()});P=P.filter(p=>p.y<cv.height+20);if(P.length)requestAnimationFrame(loop);else run=false}
+function seq(){$('rp').style.opacity=0;$('cd').textContent='3 HOURS';
+ T(()=>show('a'),300);
+ T(()=>show('b'),3600);
+ T(()=>{let n=[3,2,1];$('cd').textContent='3 HOURS'},3700);
+ T(()=>{$('b').classList.add('glitch')},7600);
+ T(()=>{$('flash').style.transition='none';$('flash').style.opacity=1;requestAnimationFrame(()=>{$('flash').style.transition='opacity 1.2s';$('flash').style.opacity=0});$('b').classList.remove('glitch');show('c');if(navigator.vibrate)navigator.vibrate([200,80,200])},8600);
+ T(()=>{show('d');burst()},11800);T(burst,13000);T(burst,14500);
+ T(()=>$('rp').style.opacity=1,16500)}
+$('start').onclick=()=>{$('start').remove();seq()};
+$('rp').onclick=()=>{show('');seq()};
+</script>
+</body></html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Book Fernando | Barcelona Boys Agency</title><meta name="description" content="Request Fernando for your private event. Our booking team will confirm availability.">
+<meta name="robots" content="noindex,nofollow,noarchive"><meta name="theme-color" content="#0a0908">
+<meta property="og:title" content="Book Fernando | Barcelona Boys Agency"><meta property="og:description" content="Request Fernando for your private event. Our booking team will confirm availability."><meta property="og:type" content="website"><meta property="og:site_name" content="Barcelona Boys Agency">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230a0908' stroke='%23c9a45c' stroke-width='3'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='27' font-weight='700' fill='%23c9a45c'%3EBB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"></head>
+<body data-page="book">
+<main><section class="page-hero"><div class="wrap center"><div class="eyebrow">Booking</div><h1>BOOK FERNANDO</h1><div class="rule"></div><p class="sub">Complete the details below and our booking team will confirm availability.</p></div></section><section style="padding-top:60px"><div class="wrap"><form class="form" id="bf" novalidate>
+<div class="perf"><img src="assets/img/fernando.jpg" alt=""><div><div class="eyebrow">Performer</div><b>FERNANDO</b><div style="font-size:12px;color:var(--mut)"><i class="dot"></i>&nbsp; Available for private bookings</div></div></div>
+<div class="fg">
+<div><label>Event type</label><select id="ev"><option>Bachelor Party</option><option>Private Party</option><option>Birthday</option><option>Corporate Event</option><option>Other</option></select></div>
+<div><label>Date</label><input id="dt" type="date" value="2026-10-10"></div>
+<div><label>Time</label><input id="tm" type="time" value="18:30"></div>
+<div><label>Location</label><input id="lc" value="Barcelona"></div>
+<div><label>Number of guests</label><input id="gs" type="number" min="1" value="6"></div>
+<div><label>Show</label><select id="sh"><option>Classic</option><option selected>Groom Special</option><option>VIP Experience</option><option>Premium Private Event</option></select></div>
+<div><label>Duration</label><select id="du"><option selected>30 minutes</option><option>45 minutes</option><option>60 minutes</option></select></div>
+<div><label>Contact name</label><input id="nm" value="Niels"></div>
+<div><label>Email</label><input id="em" type="email" value="booking@barcelonaboys-agency.com"></div>
+<div><label>Phone</label><input id="ph" value="+34 XXX XXX XXX"></div>
+<div class="full"><label>Special requests</label><textarea id="rq" placeholder="Music preferences, venue access, anything our team should know..."></textarea></div>
+<div class="full"><button class="btn gold wide" type="submit" style="padding:20px">Confirm Request</button><p style="font-size:12px;color:var(--mut);margin-top:14px;text-align:center">By submitting you accept our <a href="terms.html" style="color:var(--gold);text-decoration:underline">Terms &amp; Conditions</a>. All bookings are private and confidential.</p></div>
+</div></form></div></section></main><div class="loader" id="ld"><div class="spin"></div><p id="lp"></p><div class="bar"><i id="lb"></i></div></div>
+<script src="assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+const CONF='<div class="conf"><div class="conf-head"><div class="check">✓</div><div class="eyebrow">BARCELONA BOYS AGENCY</div><h1 style="margin-top:10px">BOOKING CONFIRMED</h1><div class="ref">Booking reference · BBA-101026-FERNANDO</div><br><div class="status"><i class="dot"></i> ✓ CONFIRMED</div></div>\n<div class="card"><h3>Booking summary</h3><div class="kv"><div><small>Performer</small><b>Fernando</b></div><div><small>Show</small><b>Groom Special</b></div><div><small>Date</small><b>Saturday, 10 October 2026</b></div><div><small>Time</small><b>18:30</b></div><div><small>Duration</small><b>30 minutes</b></div><div><small>Location</small><b>Barcelona, Spain</b></div><div><small>Guests</small><b>6</b></div><div><small>Event</small><b>Private Bachelor Party</b></div><div><small>Status</small><b style="color:var(--ok)">CONFIRMED</b></div><div><small>Booked by</small><b>Niels (Organiser)</b></div></div></div>\n<div class="card"><h3>Payment</h3><div class="paid"><div><small style="font-size:10px;letter-spacing:.26em;color:var(--mut)">GROOM SPECIAL</small><div class="amt">€250</div></div><div style="text-align:right"><div style="font-size:10px;letter-spacing:.26em;color:var(--mut);margin-bottom:8px">STATUS</div><b style="letter-spacing:.2em;font-size:14px">PAID BY ORGANISER</b><br><br><span class="pill"><i class="dot"></i> PAYMENT RECEIVED</span></div></div></div>\n<div class="card"><h3>Performer instructions</h3><div class="pad"><p>Fernando is requested to arrive performance-ready. The organiser will provide the final meeting point separately.</p></div></div>\n<div class="card"><h3>Booking conditions</h3><div class="pad"><ul class="tick"><li>Performance duration: 30 minutes</li><li>Private event</li><li>Professional performance</li><li>Performer arrival instructions provided separately</li><li>Booking contact remains confidential</li></ul></div></div>\n<div class="stamp-wrap"><div class="stamp" id="stp"><div><small>◆ BARCELONA BOYS AGENCY ◆</small><b>BOOKING<br>CONFIRMED</b><small>BBA-101026-FERNANDO</small></div></div></div>\n<div class="card"><h3>Booking confirmation sent</h3><div class="pad"><div class="email"><div class="eh"><div><b>FROM</b>Barcelona Boys Agency &lt;booking@barcelonaboys-agency.com&gt;</div><div><b>TO</b>Fernando</div><div><b>SUBJECT</b>Booking Confirmed — Groom Special — 10 October 2026</div></div>\n<div class="eb"><div class="brand">BARCELONA BOYS AGENCY</div><p>Dear Fernando,</p><p style="margin-top:12px">We are pleased to confirm your upcoming performance with Barcelona Boys Agency.</p><p style="margin-top:12px">Your booking details are below:</p>\n<table><tr><td>Reference</td><td><b>BBA-101026-FERNANDO</b></td></tr><tr><td>Show</td><td>Groom Special · 30 minutes</td></tr><tr><td>Date</td><td>Saturday, 10 October 2026 · 18:30</td></tr><tr><td>Location</td><td>Barcelona, Spain</td></tr><tr><td>Guests</td><td>6</td></tr><tr><td>Payment</td><td>€250 · Paid by organiser</td></tr></table>\n<p>Please arrive performance-ready. Meeting point details will be provided separately by the organiser.</p><p style="margin-top:12px">Kind regards,<br><b>Clara</b><br>Private Events Coordinator<br>Barcelona Boys Agency</p><small>This message is confidential and intended solely for the named recipient. Booking contact details remain confidential.</small></div></div>\n<div style="text-align:center;margin-top:28px" class="no-print"><button class="btn gold" id="pdf">Download Booking Confirmation</button></div></div></div>\n<div class="card"><h3>Your booking team</h3><div class="team"><div class="avatar">C</div><div><b>Clara</b><div style="color:var(--gold);font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin:4px 0">Barcelona Boys Agency · Private Events Coordinator</div><div style="color:var(--mut);font-style:italic;font-family:\'Cormorant Garamond\',serif;font-size:20px">Thank you for choosing Barcelona Boys Agency.</div></div></div></div></div>';
+const $=i=>document.getElementById(i);
+const params=new URLSearchParams(location.search);
+function showConf(){document.querySelector('main').innerHTML=CONF;scrollTo(0,0);const s=document.getElementById('stp');const o=new IntersectionObserver(e=>{if(e[0].isIntersecting){s.classList.add('slam');o.disconnect()}},{threshold:.5});s.style.opacity=0;o.observe(s);
+ document.getElementById('pdf').onclick=makePdf;try{sessionStorage.setItem('bba_conf','1')}catch(e){}}
+function makePdf(){
+ if(!window.jspdf){BBA.toast('Preparing document… please try again in a moment.');return}
+ const {jsPDF}=window.jspdf;const d=new jsPDF({unit:'mm',format:'a4'});
+ d.setFillColor(10,9,8);d.rect(0,0,210,48,'F');d.setDrawColor(201,164,92);d.setLineWidth(.6);d.line(0,48,210,48);
+ d.setTextColor(201,164,92);d.setFont('times','bold');d.setFontSize(24);d.text('BARCELONA BOYS AGENCY',105,24,{align:'center',charSpace:1.5});
+ d.setFont('helvetica','normal');d.setFontSize(8);d.text("BARCELONA'S PRIVATE MALE ENTERTAINMENT AGENCY",105,32,{align:'center',charSpace:1});
+ d.setFontSize(8);d.text('Private Events Department  ·  booking@barcelonaboys-agency.com  ·  Mon–Sun 10:00–00:00',105,40,{align:'center'});
+ d.setTextColor(20,20,20);d.setFont('times','bold');d.setFontSize(26);d.text('BOOKING CONFIRMATION',105,72,{align:'center'});
+ d.setFont('helvetica','normal');d.setFontSize(11);d.setTextColor(110,110,110);d.text('Booking reference',105,84,{align:'center'});
+ d.setFont('courier','bold');d.setFontSize(17);d.setTextColor(150,110,40);d.text('BBA-101026-FERNANDO',105,93,{align:'center'});
+ d.setTextColor(30,140,80);d.setFont('helvetica','bold');d.setFontSize(12);d.text('STATUS: CONFIRMED',105,103,{align:'center'});
+ const rows=[['PERFORMER','Fernando'],['SHOW','Groom Special'],['DATE','Saturday, 10 October 2026'],['TIME','18:30'],['DURATION','30 minutes'],['LOCATION','Barcelona, Spain'],['GUESTS','6'],['EVENT','Private Bachelor Party'],['PAYMENT','EUR 250 · PAID BY ORGANISER'],['BOOKED BY','Niels (Organiser)']];
+ let y=120;rows.forEach((r,i)=>{if(i%2==0){d.setFillColor(247,244,238);d.rect(25,y-6,160,11,'F')}d.setFont('helvetica','bold');d.setFontSize(8.5);d.setTextColor(140,110,50);d.text(r[0],30,y,{charSpace:.6});d.setFont('helvetica','normal');d.setFontSize(11);d.setTextColor(25,25,25);d.text(r[1],85,y);y+=11});
+ d.setFont('helvetica','bold');d.setFontSize(9);d.setTextColor(140,110,50);d.text('PERFORMER INSTRUCTIONS',30,y+8,{charSpace:.6});d.setFont('helvetica','normal');d.setFontSize(10);d.setTextColor(40,40,40);
+ d.text(d.splitTextToSize('Fernando is requested to arrive performance-ready. The organiser will provide the final meeting point separately.',150),30,y+15);
+ d.setFont('helvetica','bold');d.setFontSize(9);d.setTextColor(140,110,50);d.text('BOOKING CONDITIONS',30,y+32,{charSpace:.6});d.setFont('helvetica','normal');d.setFontSize(10);d.setTextColor(40,40,40);
+ ['Performance duration: 30 minutes','Private event','Professional performance','Performer arrival instructions provided separately','Booking contact remains confidential'].forEach((t,i)=>d.text('•  '+t,30,y+39+i*6));
+ d.setDrawColor(201,164,92);d.setLineWidth(1.2);d.circle(160,y+58,17);d.setLineWidth(.3);d.circle(160,y+58,15);d.setTextColor(170,130,50);d.setFont('times','bold');d.setFontSize(11);d.text('BOOKING',160,y+56,{align:'center'});d.text('CONFIRMED',160,y+62,{align:'center'});
+ d.setFont('helvetica','normal');d.setFontSize(9);d.setTextColor(90,90,90);d.text('Clara · Private Events Coordinator · Barcelona Boys Agency',30,y+80);d.text('Thank you for choosing Barcelona Boys Agency.',30,y+86);
+ d.setFillColor(10,9,8);d.rect(0,281,210,16,'F');d.setTextColor(201,164,92);d.setFontSize(7.5);d.text('Barcelona Boys Agency S.L.  ·  Barcelona, Spain  ·  This document is confidential',105,290,{align:'center'});
+ d.save('Booking-Confirmation-BBA-101026-FERNANDO.pdf');}
+$('bf').addEventListener('submit',e=>{e.preventDefault();
+ if(!$('nm').value.trim()||!$('em').value.trim()){BBA.toast('Please complete the required fields.');return}
+ const L=$('ld');L.classList.add('on');const steps=['Checking performer availability…','Verifying event details…','Reserving Fernando for 10 October…','Registering payment from organiser…','Generating booking confirmation…'];let i=0;const p=$('lp');p.textContent=steps[0];requestAnimationFrame(()=>$('lb').style.width='100%');
+ const t=setInterval(()=>{i++;if(i<steps.length)p.textContent=steps[i];else{clearInterval(t);L.classList.remove('on');showConf()}},900)});
+try{if(sessionStorage.getItem('bba_conf')&&location.hash==='#confirmed')showConf()}catch(e){}
+</script>
+</body></html>
