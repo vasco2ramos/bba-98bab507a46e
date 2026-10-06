@@ -1,7 +1,7 @@
 (function(){
 const SRC=document.currentScript.src;
 const ROOT=SRC.slice(0,SRC.indexOf('assets/js/main.js'));
-const CFG={phone:'+34 XXX XXX XXX',email:'booking@barcelonaboys-agency.com',ref:'BBA-101026-FERNANDO'};
+const CFG={phone:'+34 686 55 71 17',email:'booking@barcelonaboys-agency.com',ref:'BBA-101026-FERNANDO'};
 window.BBA={ROOT,CFG};
 const U=(id,w=700)=>`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
 BBA.U=U;
